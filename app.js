@@ -1,50 +1,50 @@
-const swiper = new Swiper('.main-swiper', {
-    // Optional parameters
-    direction: 'horizontal',
-    loop: true,
-    spaceBetween: 20,
-    autoplay: {
-      delay: 3000,
-      disableOnInteraction: true,
-    },
-    // If we need pagination
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true
-    },
+// const swiper = new Swiper('.main-swiper', {
+//     // Optional parameters
+//     direction: 'horizontal',
+//     loop: true,
+//     spaceBetween: 20,
+//     autoplay: {
+//       delay: 3000,
+//       disableOnInteraction: true,
+//     },
+//     // If we need pagination
+//     pagination: {
+//       el: '.swiper-pagination',
+//       clickable: true
+//     },
   
-    // Navigation arrows
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+//     // Navigation arrows
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     },
   
-});
+// });
 
-const projectsSwiper = new Swiper('.projects-swiper', {
-    loop: true,
-    slidesPerView: "auto",
-    centeredSlides: true,
-    spaceBetween: 20,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: false,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    }
-});
+// const projectsSwiper = new Swiper('.projects-swiper', {
+//     loop: true,
+//     slidesPerView: "auto",
+//     centeredSlides: true,
+//     spaceBetween: 20,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: false,
+//     },
+//     navigation: {
+//       nextEl: '.swiper-button-next',
+//       prevEl: '.swiper-button-prev',
+//     }
+// });
 
 var lastScrollTop = 0;
 
-// element should be replaced with the actual target element on which you have applied scroll, use window in case of no target element.
+
 window.addEventListener("scroll", function(){
-  // or window.addEventListener("scroll"....
-  var st = window.pageYOffset || document.documentElement.scrollTop; // Credits: "https://github.com/qeremy/so/blob/master/so.dom.js#L426"
+
+  var st = window.pageYOffset || document.documentElement.scrollTop;
 
   if (screen.width >= 575){
-    if (window.pageYOffset >= 500 || document.documentElement.scrollTop >= 500) {
+    if (window.pageYOffset >= 300 || document.documentElement.scrollTop >= 300) {
       document.querySelector(".underline").classList.add("underline-reveal");
     } else if (window.pageYOffset <= 400 || document.documentElement.scrollTop <= 400) {
       document.querySelector(".underline").classList.remove("underline-reveal");
@@ -67,8 +67,9 @@ window.addEventListener("scroll", function(){
   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
 }, false);
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
+
+document.querySelectorAll('a[href^="#"]').forEach(currElem => {
+      currElem.addEventListener('click', function (e) {
         e.preventDefault();
         document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
