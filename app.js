@@ -39,33 +39,33 @@
 var lastScrollTop = 0;
 
 
-window.addEventListener("scroll", function(){
+// window.addEventListener("scroll", function(){
 
-  var st = window.pageYOffset || document.documentElement.scrollTop;
+//   var st = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (screen.width >= 575){
-    if (window.pageYOffset >= 300 || document.documentElement.scrollTop >= 300) {
-      document.querySelector(".underline").classList.add("underline-reveal");
-    } else if (window.pageYOffset <= 400 || document.documentElement.scrollTop <= 400) {
-      document.querySelector(".underline").classList.remove("underline-reveal");
-    }
-    if (window.pageYOffset >= 900 || document.documentElement.scrollTop >= 900) {
-      document.querySelectorAll(".underline-points").forEach((e) => e.classList.add("underline-reveal"));
-    } else if (window.pageYOffset <= 700 || document.documentElement.scrollTop <= 700) {
-      document.querySelectorAll(".underline-points").forEach((e) => e.classList.remove("underline-reveal"));
-    }
-  }else{
-    document.querySelector(".underline").classList.add("underline-reveal");
-    document.querySelectorAll(".underline-points").forEach((e) => e.classList.add("underline-reveal"));
-  }
+//   if (screen.width >= 575){
+//     if (window.pageYOffset >= 300 || document.documentElement.scrollTop >= 300) {
+//       document.querySelector(".underline").classList.add("underline-reveal");
+//     } else if (window.pageYOffset <= 400 || document.documentElement.scrollTop <= 400) {
+//       document.querySelector(".underline").classList.remove("underline-reveal");
+//     }
+//     if (window.pageYOffset >= 900 || document.documentElement.scrollTop >= 900) {
+//       document.querySelectorAll(".underline-points").forEach((e) => e.classList.add("underline-reveal"));
+//     } else if (window.pageYOffset <= 700 || document.documentElement.scrollTop <= 700) {
+//       document.querySelectorAll(".underline-points").forEach((e) => e.classList.remove("underline-reveal"));
+//     }
+//   }else{
+//     document.querySelector(".underline").classList.add("underline-reveal");
+//     document.querySelectorAll(".underline-points").forEach((e) => e.classList.add("underline-reveal"));
+//   }
 
-  if (st > lastScrollTop) {
-    document.querySelector(".nav-main").classList.add("nav-main-hide");
-  } else if (st < lastScrollTop) {
-    document.querySelector(".nav-main").classList.remove("nav-main-hide");
-  } // else was horizontal scroll
-  lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
-}, false);
+//   if (st > lastScrollTop) {
+//     document.querySelector(".nav-main").classList.add("nav-main-hide");
+//   } else if (st < lastScrollTop) {
+//     document.querySelector(".nav-main").classList.remove("nav-main-hide");
+//   } // else was horizontal scroll
+//   lastScrollTop = st <= 0 ? 0 : st; // For Mobile or negative scrolling
+// }, false);
 
 
 document.querySelectorAll('a[href^="#"]').forEach(currElem => {
@@ -85,3 +85,28 @@ function menuToggle(){
   hamburger.children[2].classList.toggle("y");
   hamburger.children[1].classList.toggle("x-fade");
 }
+
+
+
+
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+});

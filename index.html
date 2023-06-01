@@ -10,11 +10,23 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <title>Armor Grandeur - Home</title>
     <link rel="stylesheet" href="index.css">
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
 
     <nav class="nav-main">
-        <img class="armor-logo" src="images/nav-logo-2.png" alt="">
+        <div class="logo">
+            <img class="armor-logo" src="images/nav-logo.png" alt="" style="width: 150px; object-fit: cover;">
+            <!-- <p>Technology for next generation</p> -->
+        </div>
         <div class="nav-btns">
             <a class="nav-link" href="#home">HOME</a>
             <a class="nav-link" href="#about-us">ABOUT US</a>
@@ -40,8 +52,15 @@
 
     <div class="nav-comp"></div>
 
-    <section id="home" class="hero">
-        <img src="images/logo.png" alt="Armor Grandeur Limited">
+    <section id="home" class="hero" style="margin-top: 15vh;">
+        <swiper-container class="mySwiper" navigation="true">
+            <swiper-slide>
+                <img src="./images/slider2.jpeg" alt="">
+            </swiper-slide>
+            <swiper-slide>
+                <img src="./images/slider1.jpeg" alt="">
+            </swiper-slide>
+          </swiper-container>
     </section>
 
     <section id="about-us" class="about">
@@ -127,6 +146,42 @@
     </div>
         <br>
         
+    </section>
+
+    <section id="teams" class="team">
+        <h3 class="our-projects">Team Members</h3>
+        <div class="core_member_container">
+            <div class="core_member_card">
+                <h3><ion-icon name="person-add-outline"></ion-icon> Dr.K.Porkumaran</h3>
+                <h4>Executive Director, Chief technology officer</h4>
+                <p><ion-icon name="calendar-outline"></ion-icon> Date of Joining  : 1.12.2022</p>
+            </div>
+            <div class="core_member_card">
+                <h3><ion-icon name="person-add-outline"></ion-icon> Mr. K. Naresh Raj</h3>
+                <h4>Chief Operating officer</h4>
+                <p><ion-icon name="calendar-outline"></ion-icon> Date of Joining  : 1.12.2022</p>
+            </div>
+            <div class="core_member_card">
+                <h3><ion-icon name="person-add-outline"></ion-icon> Dr. A.Sanjeevi Gandhi</h3>
+                <h4>Technical Director </h4>
+                <p><ion-icon name="calendar-outline"></ion-icon> Date of Joining  : 1.12.2022</p>
+            </div>
+            <div class="core_member_card">
+                <h3><ion-icon name="person-add-outline"></ion-icon> Mr. C. Jeeva</h3>
+                <h4>Technical Director</h4>
+                <p><ion-icon name="calendar-outline"></ion-icon> Date of Joining  : 1.12.2022</p>
+            </div>
+            <div class="core_member_card">
+                <h3><ion-icon name="person-add-outline"></ion-icon> Ms. B. Krithika</h3>
+                <h4>Project Team Lead</h4>
+                <p><ion-icon name="calendar-outline"></ion-icon> Date of Joining  : 1.12.2022</p>
+            </div>
+            <div class="core_member_card">
+                <h3><ion-icon name="person-add-outline"></ion-icon> Mr. C. Pravin Kumar</h3>
+                <h4>Senior Technical Manager</h4>
+                <p><ion-icon name="calendar-outline"></ion-icon> Date of Joining  : 1.03.2023</p>
+            </div>
+        </div>
     </section>
 
     <section class="about">
